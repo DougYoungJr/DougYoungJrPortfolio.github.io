@@ -21,9 +21,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">This is Massively</a></li>
-							<li class="active"><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#section1">Data Source</a></li>
+                            <li><a href="#section2">Python Data Cleaning</a></li>
+                            <li><a href="#section3">Power BI</a></li>
+                            <li><a href="#section4">Dashboards</a></li>
+                            <li><a href="#section5">Conclusions</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -45,16 +48,19 @@
 									<p>This project was an analysis of primarily packaging data for a large scale production craft brewery in the US. It sourced user entered data from Packaging Operators upon completion of each packaging run. This data was then transfomed and analyzed to provide insight on throughput capability, product popularity and volume loss based on different brands and product type. Months were separated by different tabs on the sheet with a monthly total table at the bottom and an additional yearly total tab.<br /><br />
                                     Brand names and other identifying information has been changed to protect anonymity.</p>
 								</header>
+                                <h2 id="section1"></h2>
                                 <h3>Initial Data Source</h3>
 								<div class="image main"><img src="images/raw_data.png" alt="" /></div>
 								<p>Each packaging run comprised a row in an Excel spreadsheet. The packaging operator was tasked with entering the number of units packaged in each corresponding row, each row being a different type of packaging.</p>
                                 
+                                <h2 id="section2"></h2>
                                 <h3>Concatenate Month Tabs into Master Dataset</h3>
 								<div><a href="Packaging_Data_Cleaning.html" class="image main"><img src="images/brewery_code1.png" alt="" /></a></div>
-								<p>Initial Excel file was read into Python DataFrame. Month tabs were concatenated and non-needed rows eliminated.</p>
+								<p>Initial Excel file was read into Python DataFrame. Month tabs were concatenated and non-needed rows eliminated to fit specified format for Power BI report.</p>
 								<ul class="actions special">
 									<li><a href="Packaging_Data_Cleaning.html" class="button large">View Full Code</a></li>
 								</ul>
+                                <h2 id="section3"></h2>
                                 <h3>Transforming Data in Power BI</h3>
 								<div class="image main"><img src="images/prun_lookup_table.png" alt="" /></div>
 								<p>Raw source data was imported to Power BI where packaging information was split into two tables. Packaging Run Lookup table corresponded to each run, regardless of different Product types packaged, maintaining information about each run including Brand, Packaging Tank, Carbonation Level, Volume packaged and Volume Loss during the run.</p>
@@ -63,63 +69,27 @@
                                                                 <h3>Relational Tables Created</h3>
 								<div class="image main"><img src="images/table_relations.png" alt="" /></div>
 								<p>Additional related tables created to identify Brand specific information, Product Category and Sub-Category and a calendar for date-related analysis.</p>
+                                <h2 id="section4"></h2>
                                                                                         <h3>Dashboard Creation In Power BI</h3>
 								<div class="image main"><img src="images/dashboard1.png" alt="" /></div>
  								<div class="image main"><img src="images/dashboard2.png" alt="" /></div>
  								<div class="image main"><img src="images/dashboard3.png" alt="" /></div>
-								<p>Dashboards were created to analyze and display summary information about Packaging, Brand specific information, and effects of different factors on Beer Loss.</p>        
+								<p>Dashboards were created to analyze and display summary information about Packaging, Brand specific information, and effects of different factors on Beer Loss.</p> 
+                                <h2 id="section5"></h2>
+                                                                <h3>Colclusions and Observations</h3>
+
+								<p>An analysis of overall volume packaged concluded that Triad Brewing packaged less beer in 2022 than in 2021 by about 3,500 bbl or almost 12%. The biggest discrepancies were found in the months of July-October as compared to the previous year. Further investigation determined a correlation between a decrease in staff size and an uptick in downtime due to mechanical failure to be causative to the decreased production.</p>
+                                
+                    <p>Beer loss during production increased in 2022 as compared to the previous year. Highest loss percentages were seen in canned products (~15%) with lower loss seen during Keg and Bottle runs. Examining and calibrating the operating parameters on the canline could be one corrective action.</p>
+                    
+                    <p>Individual beer specs showed some correlation with beer loss but the effect was minimal. Loss decreased slightly with an increase in both IBU and Carbonation level but overall these effects were inconclusive.</p>
+                                
+                    <p>The choice of packaging tank showed a higher correlation as all products packaged from Tank 5 showed significantly less loss than all other Packaging Tanks. Only 1% on average was lost when packaging out of Tank 5 as compared to 3-5% in all other tanks. Calibration of measuring devices for this tank would be reccomended to determine whether this is true correlation or mis-measurement.</p>
                         </section>
 
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -129,13 +99,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+
 
 	</body>
 </html>

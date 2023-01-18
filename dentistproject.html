@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Dental Marketing Budget Report</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Budget Analysis for Dental Marketing Company</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#section1">Data Source</a></li>
+                            <li><a href="#section2">Python Data Cleaning</a></li>
+                            <li><a href="#section3">Power BI</a></li>
+                            <li><a href="#section4">Dashboards</a></li>
+                            <li><a href="#section5">Conclusions</a></li>
+						</ul>
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date"></span>
+									<h1>Spending Analysis<br />
+									In Python and Power BI</h1>
+									<p>In this project, a dental marketing company needed an analysis of how it spent money across it's various states, regions and offices within specific categories of expeneses to help project a budget for the upcoming year. The client requested a format that would enable them analyze Total Spending within specific Offices/Territories split by Month</p>
+                                    <p>Company and employee names and other identifying information has been changed to protect anonymity.</p>
+								</header>
+                                <h2 id="section1"></h2>
+                                <h3>Initial Data Source</h3>
+								<div class="image main"><img src="images/dentalrawdata.png" alt="" /></div>
+								<p>An end of year itemized expense report was obtained from the company's financial institution. It included information on each expense from the Community Relations department coded by Date, Location, General Expense Type, Line Amount, and various other details about each purchase.</p>
+                                
+                                <h2 id="section2"></h2>
+                                <h3>Data Cleaning and Feature Engineering</h3>
+								<div><a href="KDB_Financial_2022_Portfolio.html" class="image main"><img src="images/dentalpython.png" alt="" /></a></div>
+								<p>The data cleaning process involved grouping similar expense codes into specific categories: "Social Media, Advertising, Outreach, Events and Other." Line items were also grouped by Month and Location. The client requested that some Locations be further categorized into Territories while others remain individual offices to see where money was being spent. Data was formatted to be filtered by Date, Practice Category (Orthodontic, Pediatric, Mobile), Office/Territory, and Category of Spending.</p>
+								<ul class="actions special">
+									<li><a href="KDB_Financial_2022_Portfolio.html" class="button large">View Full Code</a></li>
+								</ul>
+                                <h2 id="section3"></h2>
+                                <h3>Transforming Data in Power BI</h3>
+								<div class="image main"><img src="images/dentaltransactions.png" alt="" /></div>
+                                <div class="image main"><img src="images/dentaloffices.png" alt="" /></div>
+								<p>Cleaned transaction report was loaded to Power BI for analysis and visualizations. An office lookup table was also created with office specific information including address, office type and client supplied group catrgory. </p>
+                              
+
+                                                                <h3>Relational Tables Created</h3>
+								<div class="image main"><img src="images/dentalrelations.png" alt="" /></div>
+								<p>Relations were drawn to connect the two tables. A calendar lookup table was also created to analyze spending by Month</p>
+                                <h2 id="section4"></h2>
+                                                                                        <h3>Dashboard Creation In Power BI</h3>
+								<div class="image main"><img src="images/dentaldashboard.png" alt="" /></div>
+
+								<p>Dashboards were created to analyze spending. Report allows user to drill into spending table by Group and Month and displays categorical spending within those filters as well as a grand total. Slicers were added to easily filter by state and by spending category. Responsive geographical visualization allows user to see what territories are spending the most. Donut charts display expenses broken down by State and Category.</p> 
+                                <h2 id="section5"></h2>
+                                                                <h3>Colclusions and Observations</h3>
+
+								<p>By state, the most money was Spent in NC with over $130,000 in expenses. Almost 70% of those expenses were toward Outreach. Across all Territories, 57% off all expenses were categorized as Outreach. </p>
+                                <p>Event spending increased significantly in the summer months and decreased slightly in the winter months, indicating a seasonality in spending habits, likely correlated to outdoor promotional events. Higher budgetary needs could be expected in these months.</p>
+                                <p>Of the $428k spent in 2022, 56% went toward Pediatric Practices at $242.5k while Orthodontic Practices spent 41% at $176k. Mobile dentistry comprised only 1.5% of the total spending with $6700.</p>
+                                
+                        </section>
+
+					</div>
+
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+
+	</body>
+</html>
